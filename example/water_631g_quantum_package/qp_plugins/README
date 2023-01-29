@@ -1,0 +1,4 @@
+This directory is to be placed in 
+	$QP_ROOT/plugins/local/
+before to run 
+	qp plugins install ml_ci

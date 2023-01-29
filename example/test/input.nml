@@ -1,0 +1,17 @@
+&params
+ algo = 2		! 1: Direct generation ; 2: S/D generation
+ N = 26			! Number of spin-orbitals (=#visible cells)
+ Ne = 10		! Number of electrons
+ M_hiddens = 26		! Number of hidden cells
+ tempgen = 1		! Temperature in sigmoids functions
+ Nsample = 10000	! Number of samples in the training set (to be set in python scripts for now)
+ fgen = 2		! We attempt to generate fgen x N_det_pruned new determinants
+ it_up = 10		! Number of iterations in the learning process
+ tol = 8.0		! All determinants with coefficients c s.t. |c|^2 < 1e-(tol) are discarded
+ el = -1		! Not used right now
+ frozen = 2		! Number of frozen electrons (even number)
+ sym = .true.		! Do we check spatial point group symmetry of generated determinants
+ symg = 'C2v'		! Group symmetry of the system (currently accept only C2v and D2h
+ so_ir_in = 1,1,1,1,4,4,1,1,3,3,1,1,4,4,4,4,1,1,3,3,1,1,4,4,1,1		! irreducible representations of the spin-orbitals
+ ir_t = 1		! we accept new determinant whose irred. rep. is less or equal to ir_t (to be fixed in the future)
+/

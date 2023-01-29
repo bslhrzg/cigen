@@ -1,0 +1,14 @@
+This is a test usage of CIgen:
+
+	The example is that of the water molecule in 6-31g basis set. 
+	The wavefunction given is the CISD one.
+
+	please run the script proc.sh
+
+	contains: 
+	-proc.sh 	: bash script that run CIgen
+	-dets_cisd   	: Slater Determinants in spin up, spin down form from Quantum Package (QP)
+	-coefs_cisd  	: the associated coefficients from QP diagonalization
+	-n_det_cisd	: number of determinants in QP wavefunction
+	-input.nml 	: parameters read by CIgen
+	-ref/		: directory that contains the output reference files from proc.sh

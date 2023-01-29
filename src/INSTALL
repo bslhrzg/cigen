@@ -1,0 +1,4 @@
+(modify the Makefile if needed)
+
+run :
+	$ make

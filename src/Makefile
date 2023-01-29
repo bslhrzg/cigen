@@ -1,5 +1,5 @@
 # compiler
-FC = gfortran -fopenmp -O3 -Wall -fcheck=all -fdefault-integer-8 #-pg
+FC = gfortran -fopenmp -O3 -fdefault-integer-8 #-Wall -fcheck=all -pg
 
 # compile flags
 FCFLAGS = -c

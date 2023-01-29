@@ -11,7 +11,7 @@ applied to the Configuration Interaction (CI) framework of quantum chemistry.
 The main idea is to take as input an approximate CI wavefunction, use the RBM to learn the joint probability distribution
 of the occupation of the spin-orbitals, and generate as output important determinants to improve the accuracy of the current wavefunction.
 
-It is currently interfaced with Quantum Package (QP) ("URL") for the wafunction diagonalization
+It is currently interfaced with Quantum Package (QP) (https://quantum-package.readthedocs.io/en/master/index.html) for the wafunction diagonalization
 
 Contains:
 

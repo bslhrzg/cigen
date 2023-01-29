@@ -1,5 +1,6 @@
-CIgen
-=================================================
+
+# CIgen 
+
 
 This code implements the methodology in the paper:
 "Solving the Schrödinger Equation in the Configuration Space with Generative Machine Learning" 
@@ -13,6 +14,7 @@ of the occupation of the spin-orbitals, and generate as output important determi
 It is currently interfaced with Quantum Package (QP) ("URL") for the wafunction diagonalization
 
 Contains:
+
 	-src/ directory:
 		-the Fortran sources
 		-Makefile to compile the Fortran code
@@ -35,7 +37,7 @@ Dependencies:
 
 
 
-Aknowledgments:
+## Aknowledgments:
 
 	In our implementation we would like to acknowledge the use of the following sorting routines:
 		
@@ -53,3 +55,7 @@ Aknowledgments:
 		 "ORDERPACK 2.0 -- Unconditional, Unique, and Partial Ranking, Sorting, and Permutation Downloadable Fortran 90 source code"
 		 available at http://www.fortran-2000.com/rank/
 
+
+## Author
+
+- Basile Herzog: basile.herzog@univ-lorraine.fr

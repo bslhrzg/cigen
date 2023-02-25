@@ -1,12 +1,13 @@
 # compiler
 FC = gfortran -fopenmp -fdefault-integer-8#-Wall -fcheck=all -pg
-FCDEBUG = gfortran -fopenmp -g -Og -ffpe-trap=invalid,zero,overflow,underflow -fbacktrace -fdefault-integer-8#-Wall -fcheck=all -pg
 
 # compile flags
 FCFLAGS = -c
 # link flags
 FLFLAGS =
 LIB = -lblas -llapack -lstdc++ -lrt -ldl  -lz
+# debug flags
+DEBUGFLAGS = -g -Og -ffpe-trap=invalid,zero,overflow,underflow -fbacktrace
 
 PROGS=CI_gen # ao2mo lapack_diag iHj iHj_2 prun randSCI
 
@@ -34,7 +35,7 @@ CI_gen : CI_gen.f90 iomod.o readin.o tools.o var.o rbm.o
 	$(FC) $^ $(LIB) -o $@
 
 CI_gen_debug : CI_gen.f90 iomod.o readin.o tools.o var.o rbm.o 
-	$(FCDEBUG) $^ $(LIB) -o CI_gen
+	$(FC) $(DEBUGFLAGS) $^ $(LIB) -o CI_gen
 
 clean : 
 	rm  *.o *.mod

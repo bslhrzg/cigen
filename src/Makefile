@@ -1,5 +1,6 @@
 # compiler
-FC = gfortran -fopenmp -O3 -fdefault-integer-8 #-Wall -fcheck=all -pg
+FC = gfortran -fopenmp -fdefault-integer-8#-Wall -fcheck=all -pg
+FCDEBUG = gfortran -fopenmp -g -Og -ffpe-trap=invalid,zero,overflow,underflow -fbacktrace -fdefault-integer-8#-Wall -fcheck=all -pg
 
 # compile flags
 FCFLAGS = -c
@@ -11,6 +12,8 @@ PROGS=CI_gen # ao2mo lapack_diag iHj iHj_2 prun randSCI
 
 all : CI_gen clean
 #randSCI ao2mo iHj iHj_2 prun clean
+
+debug : CI_gen_debug
 
 iomod.o : iomod.f90
 	$(FC) $(FCFLAGS) $<
@@ -29,6 +32,9 @@ rbm.o : rbm.f90 tools.o
 
 CI_gen : CI_gen.f90 iomod.o readin.o tools.o var.o rbm.o 
 	$(FC) $^ $(LIB) -o $@
+
+CI_gen_debug : CI_gen.f90 iomod.o readin.o tools.o var.o rbm.o 
+	$(FCDEBUG) $^ $(LIB) -o CI_gen
 
 clean : 
 	rm  *.o *.mod

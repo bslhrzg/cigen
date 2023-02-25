@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "cigen:build:debug",
+        "type": "shell",
+        "command": "make debug",
+        "options": {
+            "cwd": "${workspaceFolder}/src"
+        }
+      },
+      {
+        "label": "cigen:build:prod",
+        "type": "shell",
+        "command": "make",
+        "options": {
+            "cwd": "${workspaceFolder}/src"
+        }
+      }
+    ]
+  }
+  
